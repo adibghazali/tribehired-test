@@ -47,6 +47,12 @@ p {
   opacity: 0.8;
 }
 
+.home-link:link, .home-link:visited, .home-link:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .content {
   display: flex;
   margin: 32px auto;
