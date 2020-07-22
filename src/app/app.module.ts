@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import { AppRoutingModule } from './app-routing.module';
 
+import { AppComponent } from './app.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostDetailsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxPaginationModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -324,5 +324,11 @@ tr:nth-child(even) {
     border-radius: 5px;
     padding: 11px 13px;
     color: white;
+    transition: all 0.3 ease-in-out;
+    cursor: pointer;
 }
 
+/* .custom-button:hover {
+  margin-bottom: 5px;
+  font-size: 13px;
+} */

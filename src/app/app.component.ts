@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PostsService } from './services/posts.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,21 +10,24 @@ import { PostsService } from './services/posts.service';
 })
 export class AppComponent implements OnInit {
   title = 'TribeHired Test';
-
   allPost;
-  // tslint:disable-next-line: no-inferrable-types
-  page: number = 1;
 
-
-  constructor(private postService: PostsService) {}
+  constructor(
+    private postService: PostsService,
+    private router: Router ) {}
 
   ngOnInit() {
     this.postService.getPostAll().subscribe(
       res => {
         console.log(res);
         this.allPost = res;
-        console.log(this.allPost);
       }
     );
+  }
+
+  postDetails(event) {
+    console.log(event);
+    // this.router.navigate(['/postDetails-component/' + event.id]);
+    this.router.navigate([`postDetails-component/${event.id}`]);
   }
 }

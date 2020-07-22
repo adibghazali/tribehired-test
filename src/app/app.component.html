@@ -1,12 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
@@ -72,7 +63,7 @@
         <tr *ngFor="let item of allPost">
           <td>{{item.title}}</td>
           <td>{{item.body}}</td>
-          <td style="width: 100px;text-align: center;vertical-align: middle;"> <button class="custom-button">Read More</button></td>
+          <td style="width: 100px;text-align: center;vertical-align: middle;"> <button class="custom-button" (click)="postDetails(item)">Read More</button></td>
         </tr>
       </div>
     </div>
